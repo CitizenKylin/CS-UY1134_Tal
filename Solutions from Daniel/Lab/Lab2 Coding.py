@@ -5,12 +5,12 @@ class Polynomial:
     def __add__(self, other):
         if (len(self.data) < len(other.data)):
             (self.data, other.data) = (other.data, self.data)
-            new = []
-            for i in range(len(self.data)):
-                if (i < len(other.data)):
-                    new.append(self.data[i] + other.data[i])
-                else:
-                    new.append(self.data[i])
+        new = []
+        for i in range(len(self.data)):
+            if (i < len(other.data)):
+                new.append(self.data[i] + other.data[i])
+            else:
+                new.append(self.data[i])
         return Polynomial(new)
 
     def __call__(self, number):
